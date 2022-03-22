@@ -5,6 +5,7 @@ db.collection("Hikes").where("id", "==", hikeID)
     .then(queryHike => {
         //see how many results you have got from the query
         size = queryHike.size;
+        console.log(size)
         // get the documents of query
         Hikes = queryHike.docs;
 
@@ -44,7 +45,6 @@ function writeReview() {
                         owner: userID,
                         title: Title,
                         level: Level,
-                        season: Season,
                         description: Description,
                         flooded: Flooded,
                         scrambled: Scrambled,
